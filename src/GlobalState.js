@@ -31,6 +31,8 @@ export const DataProvider = ({ children }) => {
     }
   }, []);
 
+  axios.defaults.baseURL = process.env.REACT_APP_SERVER;
+
   const state = {
     token: [token, setToken],
     productsAPI: ProductsAPI(),
